@@ -1,0 +1,60 @@
+Node is bootstrapped.
+Estimated gas: 1443.686 units (will add 100 for safety)
+Estimated storage: 442 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'ooHq53Zf3bFqd9XZx1BxAKACp56pDCMpYAzhTUcp3q1sQRhBDi1'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for ooHq53Zf3bFqd9XZx1BxAKACp56pDCMpYAzhTUcp3q1sQRhBDi1 to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000567
+    Expected counter: 2
+    Gas limit: 1544
+    Storage limit: 462 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000567
+      payload fees(the block proposer) ....... +ꜩ0.000567
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (pair %minimum (int %valA) (int %valB)) ;
+          storage (pair (bool %bool) (int %store)) ;
+          code { UNPAIR ;
+                 SWAP ;
+                 PUSH bool False ;
+                 UPDATE 1 ;
+                 SWAP ;
+                 UNPAIR ;
+                 DUP ;
+                 DUP 3 ;
+                 COMPARE ;
+                 LE ;
+                 IF { DROP } { SWAP ; DROP } ;
+                 DUP ;
+                 PUSH int 3 ;
+                 COMPARE ;
+                 EQ ;
+                 IF { SWAP ; PUSH bool True ; UPDATE 1 ; SWAP } {} ;
+                 UPDATE 2 ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage: (Pair False 0)
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1LBHerfFNnLVWN49Ma7RtW6vstJTrNPwL8
+        Storage size: 185 bytes
+        Paid storage size diff: 185 bytes
+        Consumed gas: 1443.686
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.04625
+          storage fees ........................... +ꜩ0.04625
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1LBHerfFNnLVWN49Ma7RtW6vstJTrNPwL8 originated.
+Contract memorized as c000-5c2e1e3e4c8f639d2cd263a383e087ac.

@@ -1,0 +1,50 @@
+Node is bootstrapped.
+Estimated storage: no bytes added
+Estimated gas: 2685.301 units (will add 100 for safety)
+Estimated storage: 67 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'oo56PL615A3LW2sZc7aqTHryyDRe2erQbaGB53ZmpW6T6Da6hS2'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for oo56PL615A3LW2sZc7aqTHryyDRe2erQbaGB53ZmpW6T6Da6hS2 to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+    Fee to the baker: ꜩ0.000357
+    Expected counter: 4
+    Gas limit: 1000
+    Storage limit: 0 bytes
+    Balance updates:
+      tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi ... -ꜩ0.000357
+      payload fees(the block proposer) ....... +ꜩ0.000357
+    Revelation of manager public key:
+      Contract: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+      Key: edpkuvNy6TuQ2z8o9wnoaTtTXkzQk7nhegCHfxBc4ecsd4qG71KYNG
+      This revelation was successfully applied
+      Consumed gas: 1000
+  Manager signed operations:
+    From: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+    Fee to the baker: ꜩ0.000438
+    Expected counter: 5
+    Gas limit: 2786
+    Storage limit: 87 bytes
+    Balance updates:
+      tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi ... -ꜩ0.000438
+      payload fees(the block proposer) ....... +ꜩ0.000438
+    Transaction:
+      Amount: ꜩ0
+      From: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+      To: KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s
+      Parameter: 5
+      This transaction was successfully applied
+      Updated storage: 4
+      Updated big_maps:
+        Set map(4)[0x00007c38b4bb43c4340b9e33ab837130c63223aa9fd7] to 5
+      Storage size: 194 bytes
+      Paid storage size diff: 67 bytes
+      Consumed gas: 2686.156
+      Balance updates:
+        tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi ... -ꜩ0.01675
+        storage fees ........................... +ꜩ0.01675
+

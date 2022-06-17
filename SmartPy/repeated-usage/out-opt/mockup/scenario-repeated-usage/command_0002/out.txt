@@ -1,0 +1,66 @@
+Node is bootstrapped.
+Estimated gas: 1686.914 units (will add 100 for safety)
+Estimated storage: 542 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'onr1Lo8JzxEkTpaUE2LZCiQUtkjV4b9Sthed4H8SKSdeu1eRpz2'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for onr1Lo8JzxEkTpaUE2LZCiQUtkjV4b9Sthed4H8SKSdeu1eRpz2 to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000639
+    Expected counter: 2
+    Gas limit: 1787
+    Storage limit: 562 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000639
+      payload fees(the block proposer) ....... +ꜩ0.000639
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (nat %division) ;
+          storage (pair (big_map %ledger address nat) (nat %result)) ;
+          code { UNPAIR ;
+                 SWAP ;
+                 DUP ;
+                 DUG 2 ;
+                 CAR ;
+                 SENDER ;
+                 GET ;
+                 IF_NONE { PUSH int 17 ; FAILWITH } {} ;
+                 DUP ;
+                 PUSH nat 0 ;
+                 COMPARE ;
+                 NEQ ;
+                 IF { DIG 2 ;
+                      SWAP ;
+                      DIG 2 ;
+                      EDIV ;
+                      IF_NONE { PUSH int 19 ; FAILWITH } { CAR } ;
+                      UPDATE 2 }
+                    { DROP 2 } ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage:
+          (Pair { Elt "tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi" 10 } 0)
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1UCZW6BWb3CdPVBEuqPQAbyvztyBgzvG2e
+        Storage size: 285 bytes
+        Updated big_maps:
+          New map(4) of type (big_map address nat)
+          Set map(4)[0x00007c38b4bb43c4340b9e33ab837130c63223aa9fd7] to 10
+        Paid storage size diff: 285 bytes
+        Consumed gas: 1686.914
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.07125
+          storage fees ........................... +ꜩ0.07125
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1UCZW6BWb3CdPVBEuqPQAbyvztyBgzvG2e originated.
+Contract memorized as c000-74d77fc0c6d0b8f3d5d3bb796d7ba331.

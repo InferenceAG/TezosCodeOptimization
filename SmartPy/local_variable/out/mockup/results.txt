@@ -1,0 +1,14 @@
+################################################################################
+* Ran 1 test.
+* Total time: 4.993000 s.
+  * Start: 2022-06-17T12:46:42-00:00
+  * End:   2022-06-17T12:46:47-00:00
+################################################################################
+#====== Test Results for scenario-local-variable: All OK! ======#
+⏰ Total Time: 4.99 s.
+Scenario interpretation state: (5 history items):
+  ✔ New contract 0 (l.29).
+  ✔ Message 0#minimum (l.31)(valid: True).
+  ✔ Verify (l.32).
+  ✔ Message 0#minimum (l.34)(valid: True).
+  ✔ Verify (l.35).

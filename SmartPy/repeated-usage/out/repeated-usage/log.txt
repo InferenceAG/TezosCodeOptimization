@@ -1,0 +1,17 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> (Pair {Elt "tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi" 10} 0)
+ => ./out/repeated-usage/step_000_cont_0_storage.tz 1
+ => ./out/repeated-usage/step_000_cont_0_storage.json 1
+ => ./out/repeated-usage/step_000_cont_0_sizes.csv 2
+ => ./out/repeated-usage/step_000_cont_0_storage.py 1
+ => ./out/repeated-usage/step_000_cont_0_types.py 7
+ => ./out/repeated-usage/step_000_cont_0_contract.tz 52
+ => ./out/repeated-usage/step_000_cont_0_contract.json 48
+ => ./out/repeated-usage/step_000_cont_0_contract.py 14
+ => ./out/repeated-usage/step_001_cont_0_params.py 1
+ => ./out/repeated-usage/step_001_cont_0_params.tz 1
+ => ./out/repeated-usage/step_001_cont_0_params.json 1
+Executing division(22)...
+ -> (Pair {Elt "tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi" 10} 2)
+Verifying sp.contract_data(0).result == 2...
+ OK

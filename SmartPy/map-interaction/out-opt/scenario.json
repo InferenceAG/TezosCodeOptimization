@@ -1,0 +1,43 @@
+[
+ {
+  "shortname": "map-interaction",
+  "longname": "map-interaction",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"map-interaction-opt.py\" 27)) \nstorage (record (\"map-interaction-opt.py\" 10) (ledger (type_annotation (big_map (\"map-interaction-opt.py\" 10) ) (bigmap \"address\" \"nat\") (\"map-interaction-opt.py\" 10))))\nstorage_type (())\nentry_points ((add True None None None True (\"map-interaction-opt.py\" 14) ((set (getItem (attr (data) \"ledger\" (\"map-interaction-opt.py\" 16)) (sender) (\"map-interaction-opt.py\" 17)) (add (getItemDefault (attr (data) \"ledger\" (\"map-interaction-opt.py\" 16)) (sender) (literal (intOrNat 0) (\"map-interaction-opt.py\" 16)) (\"map-interaction-opt.py\" 16)) (params (\"map-interaction-opt.py\" 14)) (\"map-interaction-opt.py\" 17)) (\"map-interaction-opt.py\" 17)))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"map-interaction-opt.py\" 27))",
+    "line_no": "(\"map-interaction-opt.py\" 27)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"map-interaction-opt.py\" 27))",
+    "line_no": "(\"map-interaction-opt.py\" 29)",
+    "message": "add",
+    "params": "(literal (intOrNat 5) (\"map-interaction-opt.py\" 29))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (getItem (attr (contract_data (static_id 0 (\"map-interaction-opt.py\" 27)) (\"map-interaction-opt.py\" 29)) \"ledger\" (\"map-interaction-opt.py\" 30)) (resolve (attr (account_of_seed \"Alice\" (\"map-interaction-opt.py\" 25)) \"address\" (\"map-interaction-opt.py\" 25)) (\"map-interaction-opt.py\" 25)) (\"map-interaction-opt.py\" 30)) (literal (intOrNat 5) (\"map-interaction-opt.py\" 30)) (\"map-interaction-opt.py\" 30))",
+    "line_no": "(\"map-interaction-opt.py\" 30)"
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"map-interaction-opt.py\" 27))",
+    "line_no": "(\"map-interaction-opt.py\" 32)",
+    "message": "add",
+    "params": "(literal (intOrNat 3) (\"map-interaction-opt.py\" 32))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (getItem (attr (contract_data (static_id 0 (\"map-interaction-opt.py\" 27)) (\"map-interaction-opt.py\" 32)) \"ledger\" (\"map-interaction-opt.py\" 33)) (resolve (attr (account_of_seed \"Alice\" (\"map-interaction-opt.py\" 25)) \"address\" (\"map-interaction-opt.py\" 25)) (\"map-interaction-opt.py\" 25)) (\"map-interaction-opt.py\" 33)) (literal (intOrNat 8) (\"map-interaction-opt.py\" 33)) (\"map-interaction-opt.py\" 33))",
+    "line_no": "(\"map-interaction-opt.py\" 33)"
+   }
+  ],
+  "kind": "test"
+ }
+]

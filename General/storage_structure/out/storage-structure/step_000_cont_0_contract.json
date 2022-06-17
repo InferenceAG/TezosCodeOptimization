@@ -1,0 +1,77 @@
+[
+  {
+    "prim": "storage",
+    "args": [
+      {
+        "prim": "pair",
+        "args": [
+          {
+            "prim": "pair",
+            "args": [
+              {
+                "prim": "pair",
+                "args": [
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value1" ] }, { "prim": "int", "annots": [ "%value10" ] } ] },
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value11" ] }, { "prim": "int", "annots": [ "%value12" ] } ] }
+                ]
+              },
+              {
+                "prim": "pair",
+                "args": [
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value13" ] }, { "prim": "int", "annots": [ "%value14" ] } ] },
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value15" ] }, { "prim": "int", "annots": [ "%value16" ] } ] }
+                ]
+              }
+            ]
+          },
+          {
+            "prim": "pair",
+            "args": [
+              {
+                "prim": "pair",
+                "args": [
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value2" ] }, { "prim": "int", "annots": [ "%value3" ] } ] },
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value4" ] }, { "prim": "int", "annots": [ "%value5" ] } ] }
+                ]
+              },
+              {
+                "prim": "pair",
+                "args": [
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value6" ] }, { "prim": "int", "annots": [ "%value7" ] } ] },
+                  { "prim": "pair", "args": [ { "prim": "int", "annots": [ "%value8" ] }, { "prim": "int", "annots": [ "%value9" ] } ] }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  { "prim": "parameter", "args": [ { "prim": "unit", "annots": [ "%increaseCounter" ] } ] },
+  {
+    "prim": "code",
+    "args": [
+      [
+        { "prim": "CDR" },
+        { "prim": "UNPAIR" },
+        { "prim": "UNPAIR" },
+        { "prim": "SWAP" },
+        { "prim": "UNPAIR" },
+        { "prim": "SWAP" },
+        { "prim": "UNPAIR" },
+        { "prim": "SWAP" },
+        { "prim": "PUSH", "args": [ { "prim": "int" }, { "int": "1" } ] },
+        { "prim": "ADD" },
+        { "prim": "SWAP" },
+        { "prim": "PAIR" },
+        { "prim": "SWAP" },
+        { "prim": "PAIR" },
+        { "prim": "SWAP" },
+        { "prim": "PAIR" },
+        { "prim": "PAIR" },
+        { "prim": "NIL", "args": [ { "prim": "operation" } ] },
+        { "prim": "PAIR" }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+Node is bootstrapped.
+Estimated gas: 1442.406 units (will add 100 for safety)
+Estimated storage: 428 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'oovEbpZWeBfk9XfdSQ1kpX5qxHCTWtr3iDa4x3U3a1RJWzeo2ew'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for oovEbpZWeBfk9XfdSQ1kpX5qxHCTWtr3iDa4x3U3a1RJWzeo2ew to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000523
+    Expected counter: 2
+    Gas limit: 1543
+    Storage limit: 448 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000523
+      payload fees(the block proposer) ....... +ꜩ0.000523
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (nat %add) ;
+          storage (big_map address nat) ;
+          code { UNPAIR ;
+                 SWAP ;
+                 DUP ;
+                 DUG 2 ;
+                 SENDER ;
+                 MEM ;
+                 IF {} { SWAP ; PUSH (option nat) (Some 0) ; SENDER ; UPDATE ; SWAP } ;
+                 SWAP ;
+                 DUP ;
+                 SENDER ;
+                 DUP ;
+                 DUG 2 ;
+                 GET ;
+                 IF_NONE { PUSH int 19 ; FAILWITH } {} ;
+                 DIG 3 ;
+                 ADD ;
+                 SOME ;
+                 SWAP ;
+                 UPDATE ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage: {}
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1TgmeS48uRBB37ZtJJ1fRqvn4zMY1uDT9y
+        Storage size: 171 bytes
+        Updated big_maps:
+          New map(4) of type (big_map address nat)
+        Paid storage size diff: 171 bytes
+        Consumed gas: 1442.406
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.04275
+          storage fees ........................... +ꜩ0.04275
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1TgmeS48uRBB37ZtJJ1fRqvn4zMY1uDT9y originated.
+Contract memorized as c000-0fbe9a8407ab178b77203eefd88446ba.

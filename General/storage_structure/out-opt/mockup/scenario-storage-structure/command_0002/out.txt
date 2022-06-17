@@ -1,0 +1,61 @@
+Node is bootstrapped.
+Estimated gas: 1451.629 units (will add 100 for safety)
+Estimated storage: 609 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'oop978pfth5Nbu9fRr2YPFhEr96mLRj9AW1ZNuKgtgHRPMGektM'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for oop978pfth5Nbu9fRr2YPFhEr96mLRj9AW1ZNuKgtgHRPMGektM to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.00076
+    Expected counter: 2
+    Gas limit: 1552
+    Storage limit: 629 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.00076
+      payload fees(the block proposer) ....... +ꜩ0.00076
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (unit %increaseCounter) ;
+          storage
+            (pair (nat %value1)
+                  (pair (nat %value2)
+                        (pair (nat %value3)
+                              (pair (nat %value4)
+                                    (pair (nat %value5)
+                                          (pair (nat %value6)
+                                                (pair (nat %value7)
+                                                      (pair (nat %value8)
+                                                            (pair (nat %value9)
+                                                                  (pair (nat %value10)
+                                                                        (pair (nat %value11)
+                                                                              (pair (nat %value12)
+                                                                                    (pair (nat %value13) (pair (nat %value14) (pair (nat %value15) (nat %value16)))))))))))))))) ;
+          code { CDR ; DUP ; CAR ; PUSH nat 1 ; ADD ; UPDATE 1 ; NIL operation ; PAIR } }
+        Initial storage:
+          (Pair 0
+                (Pair 2
+                      (Pair 3
+                            (Pair 4
+                                  (Pair 5
+                                        (Pair 6 (Pair 7 (Pair 8 (Pair 9 (Pair 10 (Pair 11 (Pair 12 (Pair 13 (Pair 14 (Pair 15 16)))))))))))))))
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1Ew5YnYi2qmXBQ4BiUf2BFWs2iuEPRpeMX
+        Storage size: 352 bytes
+        Paid storage size diff: 352 bytes
+        Consumed gas: 1451.629
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.088
+          storage fees ........................... +ꜩ0.088
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1Ew5YnYi2qmXBQ4BiUf2BFWs2iuEPRpeMX originated.
+Contract memorized as c000-52661dedcc19a85987c77a81518fd9c5.

@@ -1,0 +1,151 @@
+################################################################################
+* Ran 1 test.
+* Total time: 4.796000 s.
+  * Start: 2022-06-17T13:06:20-00:00
+  * End:   2022-06-17T13:06:25-00:00
+################################################################################
+#====== Test Results for scenario-map-interaction: All OK! ======#
+⏰ Total Time: 4.79 s.
+Scenario interpretation state: (5 history items):
+  ✔ New contract 0 (l.27), details:
+    \_
+      |- id: 0
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0000/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0000/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0000/err.txt`
+      |- ret: 0
+    \_
+      |- id: 1
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0001/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0001/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0001/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 1410065408
+      |- from: `bootstrap1`
+      |- to: `smartml-originator`
+    \_
+      |- id: 2
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0002/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0002/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0002/err.txt`
+      |- ret: 0
+    \_
+      |- origination: c000-d0939bb1b1c0e42ce3ef9aa6b8e30fee
+      |- code:
+         `./out-opt/mockup/scenario-map-interaction/contract-c000-d0939bb1b1c0e42ce3ef9aa6b8e30fee.tz`
+    New contract: KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s
+  ✔ Message 0#add (l.29)(valid: True), details:
+    \_
+      |- id: 3
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0003/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0003/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0003/err.txt`
+      |- ret: 0
+    \_
+      |- id: 4
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0004/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0004/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0004/err.txt`
+      |- ret: 0
+    \_
+      |- id: 5
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0005/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0005/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0005/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 10000000
+      |- from: `bootstrap1`
+      |- to: `Acc-tz1WxrQuZ4`
+    \_
+      |- id: 6
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0006/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0006/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0006/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 0
+      |- from: `Acc-tz1WxrQuZ4`
+      |- to: `KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s`
+  ✔ Verify (l.30), details:
+    \_debug:
+      |- expression:
+         `sp.contract_data(0).ledger[sp.resolve(sp.test_account("Alice").address)] == 5`
+      |- layout: `(Leaf { source = "k0"; target = "k0" })`
+    \_
+      |- id: 8
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0008/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0008/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0008/err.txt`
+      |- ret: 0
+    \_
+      |- id: 7
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0007/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0007/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0007/err.txt`
+      |- ret: 0
+  ✔ Message 0#add (l.32)(valid: True), details:
+    \_
+      |- id: 9
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0009/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0009/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0009/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 0
+      |- from: `Acc-tz1WxrQuZ4`
+      |- to: `KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s`
+  ✔ Verify (l.33), details:
+    \_debug:
+      |- expression:
+         `sp.contract_data(0).ledger[sp.resolve(sp.test_account("Alice").address)] == 8`
+      |- layout: `(Leaf { source = "k0"; target = "k0" })`
+    \_
+      |- id: 11
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0011/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0011/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0011/err.txt`
+      |- ret: 0
+    \_
+      |- id: 10
+      |- command:
+         `./out-opt/mockup/scenario-map-interaction/command_0010/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-map-interaction/command_0010/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-map-interaction/command_0010/err.txt`
+      |- ret: 0

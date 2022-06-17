@@ -1,0 +1,149 @@
+################################################################################
+* Ran 1 test.
+* Total time: 4.538000 s.
+  * Start: 2022-06-17T12:46:27-00:00
+  * End:   2022-06-17T12:46:32-00:00
+################################################################################
+#====== Test Results for scenario-local-variable: All OK! ======#
+⏰ Total Time: 4.53 s.
+Scenario interpretation state: (5 history items):
+  ✔ New contract 0 (l.30), details:
+    \_
+      |- id: 0
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0000/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0000/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0000/err.txt`
+      |- ret: 0
+    \_
+      |- id: 1
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0001/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0001/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0001/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 1410065408
+      |- from: `bootstrap1`
+      |- to: `smartml-originator`
+    \_
+      |- id: 2
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0002/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0002/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0002/err.txt`
+      |- ret: 0
+    \_
+      |- origination: c000-5c2e1e3e4c8f639d2cd263a383e087ac
+      |- code:
+         `./out-opt/mockup/scenario-local-variable/contract-c000-5c2e1e3e4c8f639d2cd263a383e087ac.tz`
+    New contract: KT1LBHerfFNnLVWN49Ma7RtW6vstJTrNPwL8
+  ✔ Message 0#minimum (l.32)(valid: True), details:
+    \_
+      |- id: 3
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0003/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0003/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0003/err.txt`
+      |- ret: 0
+    \_
+      |- id: 4
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0004/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0004/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0004/err.txt`
+      |- ret: 0
+    \_
+      |- id: 5
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0005/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0005/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0005/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 10000000
+      |- from: `bootstrap1`
+      |- to: `Acc-tz1WxrQuZ4`
+    \_
+      |- id: 6
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0006/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0006/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0006/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 0
+      |- from: `Acc-tz1WxrQuZ4`
+      |- to: `KT1LBHerfFNnLVWN49Ma7RtW6vstJTrNPwL8`
+  ✔ Verify (l.33), details:
+    \_debug:
+      |- expression: `sp.contract_data(0).store == 3`
+      |- layout: `(Leaf { source = "k0"; target = "k0" })`
+    \_
+      |- id: 8
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0008/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0008/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0008/err.txt`
+      |- ret: 0
+    \_
+      |- id: 7
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0007/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0007/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0007/err.txt`
+      |- ret: 0
+  ✔ Message 0#minimum (l.35)(valid: True), details:
+    \_
+      |- id: 9
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0009/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0009/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0009/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 0
+      |- from: `Acc-tz1WxrQuZ4`
+      |- to: `KT1LBHerfFNnLVWN49Ma7RtW6vstJTrNPwL8`
+  ✔ Verify (l.36), details:
+    \_debug:
+      |- expression: `sp.contract_data(0).store == 4`
+      |- layout: `(Leaf { source = "k0"; target = "k0" })`
+    \_
+      |- id: 11
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0011/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0011/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0011/err.txt`
+      |- ret: 0
+    \_
+      |- id: 10
+      |- command:
+         `./out-opt/mockup/scenario-local-variable/command_0010/cmd.txt`
+      |- stdout:
+         `./out-opt/mockup/scenario-local-variable/command_0010/out.txt`
+      |- stderr:
+         `./out-opt/mockup/scenario-local-variable/command_0010/err.txt`
+      |- ret: 0

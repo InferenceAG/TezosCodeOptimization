@@ -1,0 +1,30 @@
+[
+ {
+  "shortname": "storage-structure",
+  "longname": "storage-structure",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"storage-structure.py\" 37)) \nstorage (record (\"storage-structure.py\" 22) (value1 (literal (intOrNat 1) (\"storage-structure.py\" 22))) (value10 (literal (intOrNat 10) (\"storage-structure.py\" 22))) (value11 (literal (intOrNat 11) (\"storage-structure.py\" 22))) (value12 (literal (intOrNat 12) (\"storage-structure.py\" 22))) (value13 (literal (intOrNat 13) (\"storage-structure.py\" 22))) (value14 (literal (intOrNat 14) (\"storage-structure.py\" 22))) (value15 (literal (intOrNat 15) (\"storage-structure.py\" 22))) (value16 (literal (intOrNat 0) (\"storage-structure.py\" 22))) (value2 (literal (intOrNat 2) (\"storage-structure.py\" 22))) (value3 (literal (intOrNat 3) (\"storage-structure.py\" 22))) (value4 (literal (intOrNat 4) (\"storage-structure.py\" 22))) (value5 (literal (intOrNat 5) (\"storage-structure.py\" 22))) (value6 (literal (intOrNat 6) (\"storage-structure.py\" 22))) (value7 (literal (intOrNat 7) (\"storage-structure.py\" 22))) (value8 (literal (intOrNat 8) (\"storage-structure.py\" 22))) (value9 (literal (intOrNat 9) (\"storage-structure.py\" 22))))\nstorage_type (())\nentry_points ((increaseCounter True None None None False (\"storage-structure.py\" 25) ((set (attr (data) \"value16\" (\"storage-structure.py\" 27)) (add (attr (data) \"value16\" (\"storage-structure.py\" 27)) (literal (intOrNat 1) (\"storage-structure.py\" 27)) (\"storage-structure.py\" 27)) (\"storage-structure.py\" 27)))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"storage-structure.py\" 37))",
+    "line_no": "(\"storage-structure.py\" 37)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"storage-structure.py\" 37))",
+    "line_no": "(\"storage-structure.py\" 39)",
+    "message": "increaseCounter",
+    "params": "(record (\"storage-structure.py\" 39) )",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"storage-structure.py\" 37)) (\"storage-structure.py\" 39)) \"value16\" (\"storage-structure.py\" 40)) (literal (intOrNat 1) (\"storage-structure.py\" 40)) (\"storage-structure.py\" 40))",
+    "line_no": "(\"storage-structure.py\" 40)"
+   }
+  ],
+  "kind": "test"
+ }
+]

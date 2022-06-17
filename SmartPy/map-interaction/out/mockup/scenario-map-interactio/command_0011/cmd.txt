@@ -1,0 +1,23 @@
+mkdir -p './out/mockup/scenario-map-interactio/client-dir' './out/mockup/scenario-map-interactio/command_0011' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.XH621d' 'run' 'script' 'parameter (big_map %compute address nat);
+storage   (option bool);
+code
+  {
+    CAR;        # @parameter
+    # == compute ==
+    # self.data = sp.some(params.k0.ledger[sp.address('\''tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi'\'')] == 8) # @parameter
+    PUSH nat 8; # nat : @parameter
+    SWAP;       # @parameter : nat
+    PUSH address "tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi"; # address : @parameter : nat
+    GET;        # option nat : nat
+    IF_NONE
+      {
+        PUSH int 35; # int : nat
+        FAILWITH;   # FAILED
+      }
+      {}; # @some : nat
+    COMPARE;    # int
+    EQ;         # bool
+    SOME;       # option bool
+    NIL operation; # list operation : option bool
+    PAIR;       # pair (list operation) (option bool)
+  };' 'on' 'storage' 'None' 'and' 'input' '4' '-G' '1000000000' > './out/mockup/scenario-map-interactio/command_0011'/out.txt 2> './out/mockup/scenario-map-interactio/command_0011'/err.txt ; }

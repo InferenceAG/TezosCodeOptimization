@@ -1,0 +1,26 @@
+parameter (nat %add);
+storage   (big_map address nat);
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    SWAP;       # @storage : @parameter
+    # == add ==
+    # self.data.ledger[sp.sender] = self.data.ledger.get(sp.sender, default_value = 0) + params # @storage : @parameter
+    DUP;        # @storage : @storage : @parameter
+    DUG 2;      # @storage : @parameter : @storage
+    SWAP;       # @parameter : @storage : @storage
+    DIG 2;      # @storage : @parameter : @storage
+    SENDER;     # @sender : @storage : @parameter : @storage
+    GET;        # option nat : @parameter : @storage
+    IF_NONE
+      {
+        PUSH nat 0; # nat : @parameter : @storage
+      }
+      {}; # nat : @parameter : @storage
+    ADD;        # nat : @storage
+    SOME;       # option nat : @storage
+    SENDER;     # @sender : option nat : @storage
+    UPDATE;     # big_map address nat
+    NIL operation; # list operation : big_map address nat
+    PAIR;       # pair (list operation) (big_map address nat)
+  };

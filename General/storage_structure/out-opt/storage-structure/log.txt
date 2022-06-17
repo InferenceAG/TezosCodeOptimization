@@ -1,0 +1,17 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> (Pair 0 (Pair 2 (Pair 3 (Pair 4 (Pair 5 (Pair 6 (Pair 7 (Pair 8 (Pair 9 (Pair 10 (Pair 11 (Pair 12 (Pair 13 (Pair 14 (Pair 15 16)))))))))))))))
+ => ./out-opt/storage-structure/step_000_cont_0_storage.tz 1
+ => ./out-opt/storage-structure/step_000_cont_0_storage.json 79
+ => ./out-opt/storage-structure/step_000_cont_0_sizes.csv 2
+ => ./out-opt/storage-structure/step_000_cont_0_storage.py 1
+ => ./out-opt/storage-structure/step_000_cont_0_types.py 7
+ => ./out-opt/storage-structure/step_000_cont_0_contract.tz 15
+ => ./out-opt/storage-structure/step_000_cont_0_contract.json 111
+ => ./out-opt/storage-structure/step_000_cont_0_contract.py 27
+ => ./out-opt/storage-structure/step_001_cont_0_params.py 1
+ => ./out-opt/storage-structure/step_001_cont_0_params.tz 1
+ => ./out-opt/storage-structure/step_001_cont_0_params.json 1
+Executing increaseCounter(sp.record())...
+ -> (Pair 1 (Pair 2 (Pair 3 (Pair 4 (Pair 5 (Pair 6 (Pair 7 (Pair 8 (Pair 9 (Pair 10 (Pair 11 (Pair 12 (Pair 13 (Pair 14 (Pair 15 16)))))))))))))))
+Verifying sp.contract_data(0).value1 == 1...
+ OK

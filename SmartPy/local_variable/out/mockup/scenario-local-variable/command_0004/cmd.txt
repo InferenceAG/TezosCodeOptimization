@@ -1,0 +1,1 @@
+mkdir -p './out/mockup/scenario-local-variable/client-dir' './out/mockup/scenario-local-variable/command_0004' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.ia06mT' 'get' 'balance' 'for' 'Acc-tz1WxrQuZ4' > './out/mockup/scenario-local-variable/command_0004'/out.txt 2> './out/mockup/scenario-local-variable/command_0004'/err.txt ; }

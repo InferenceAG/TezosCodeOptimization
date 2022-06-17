@@ -1,0 +1,1 @@
+mkdir -p './out/mockup/scenario-map-interactio/client-dir' './out/mockup/scenario-map-interactio/command_0010' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.XH621d' 'get' 'contract' 'storage' 'for' 'KT1TgmeS48uRBB37ZtJJ1fRqvn4zMY1uDT9y' > './out/mockup/scenario-map-interactio/command_0010'/out.txt 2> './out/mockup/scenario-map-interactio/command_0010'/err.txt ; }

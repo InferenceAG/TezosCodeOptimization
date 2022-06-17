@@ -1,0 +1,43 @@
+[
+ {
+  "shortname": "map-interactio",
+  "longname": "map-interactio",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"map-interaction.py\" 29)) \nstorage (record (\"map-interaction.py\" 10) (ledger (type_annotation (big_map (\"map-interaction.py\" 10) ) (bigmap \"address\" \"nat\") (\"map-interaction.py\" 10))))\nstorage_type (())\nentry_points ((add True None None None True (\"map-interaction.py\" 14) ((ifBlock (not (contains (attr (data) \"ledger\" (\"map-interaction.py\" 16)) (sender) (\"map-interaction.py\" 16)) (\"map-interaction.py\" 16)) ((set (getItem (attr (data) \"ledger\" (\"map-interaction.py\" 16)) (sender) (\"map-interaction.py\" 17)) (literal (intOrNat 0) (\"map-interaction.py\" 17)) (\"map-interaction.py\" 17))) (\"map-interaction.py\" 16)) (set (getItem (attr (data) \"ledger\" (\"map-interaction.py\" 16)) (sender) (\"map-interaction.py\" 19)) (add (getItem (attr (data) \"ledger\" (\"map-interaction.py\" 16)) (sender) (\"map-interaction.py\" 19)) (params (\"map-interaction.py\" 14)) (\"map-interaction.py\" 19)) (\"map-interaction.py\" 19)))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"map-interaction.py\" 29))",
+    "line_no": "(\"map-interaction.py\" 29)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"map-interaction.py\" 29))",
+    "line_no": "(\"map-interaction.py\" 31)",
+    "message": "add",
+    "params": "(literal (intOrNat 5) (\"map-interaction.py\" 31))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (getItem (attr (contract_data (static_id 0 (\"map-interaction.py\" 29)) (\"map-interaction.py\" 31)) \"ledger\" (\"map-interaction.py\" 32)) (resolve (attr (account_of_seed \"Alice\" (\"map-interaction.py\" 27)) \"address\" (\"map-interaction.py\" 27)) (\"map-interaction.py\" 27)) (\"map-interaction.py\" 32)) (literal (intOrNat 5) (\"map-interaction.py\" 32)) (\"map-interaction.py\" 32))",
+    "line_no": "(\"map-interaction.py\" 32)"
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"map-interaction.py\" 29))",
+    "line_no": "(\"map-interaction.py\" 34)",
+    "message": "add",
+    "params": "(literal (intOrNat 3) (\"map-interaction.py\" 34))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (getItem (attr (contract_data (static_id 0 (\"map-interaction.py\" 29)) (\"map-interaction.py\" 34)) \"ledger\" (\"map-interaction.py\" 35)) (resolve (attr (account_of_seed \"Alice\" (\"map-interaction.py\" 27)) \"address\" (\"map-interaction.py\" 27)) (\"map-interaction.py\" 27)) (\"map-interaction.py\" 35)) (literal (intOrNat 8) (\"map-interaction.py\" 35)) (\"map-interaction.py\" 35))",
+    "line_no": "(\"map-interaction.py\" 35)"
+   }
+  ],
+  "kind": "test"
+ }
+]

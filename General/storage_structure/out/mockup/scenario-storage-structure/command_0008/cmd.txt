@@ -1,0 +1,16 @@
+mkdir -p './out/mockup/scenario-storage-structure/client-dir' './out/mockup/scenario-storage-structure/command_0008' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.cTAYIP' 'run' 'script' 'parameter (pair %compute (pair (pair (pair (int %value1) (int %value10)) (pair (int %value11) (int %value12))) (pair (pair (int %value13) (int %value14)) (pair (int %value15) (int %value16)))) (pair (pair (pair (int %value2) (int %value3)) (pair (int %value4) (int %value5))) (pair (pair (int %value6) (int %value7)) (pair (int %value8) (int %value9)))));
+storage   (option bool);
+code
+  {
+    CAR;        # @parameter
+    # == compute ==
+    # self.data = sp.some(params.k0.value16 == 1) # @parameter
+    CAR;        # pair (pair (pair (int %value1) (int %value10)) (pair (int %value11) (int %value12))) (pair (pair (int %value13) (int %value14)) (pair (int %value15) (int %value16)))
+    GET 6;      # int
+    PUSH int 1; # int : int
+    COMPARE;    # int
+    EQ;         # bool
+    SOME;       # option bool
+    NIL operation; # list operation : option bool
+    PAIR;       # pair (list operation) (option bool)
+  };' 'on' 'storage' 'None' 'and' 'input' 'Pair (Pair (Pair (Pair 1 10) 11 12) (Pair 13 14) 15 1) (Pair (Pair 2 3) 4 5) (Pair 6 7) 8 9' '-G' '1000000000' > './out/mockup/scenario-storage-structure/command_0008'/out.txt 2> './out/mockup/scenario-storage-structure/command_0008'/err.txt ; }

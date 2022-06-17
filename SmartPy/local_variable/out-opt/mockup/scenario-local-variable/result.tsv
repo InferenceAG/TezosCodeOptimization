@@ -1,0 +1,6 @@
+scenario-local-variable OK
+  OK,0030,New_contract
+  OK,0032,Message
+  OK,0033,Verify
+  OK,0035,Message
+  OK,0036,Verify

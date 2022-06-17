@@ -1,0 +1,30 @@
+[
+ {
+  "shortname": "repeated-usage",
+  "longname": "repeated-usage",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"repeated-usage.py\" 28)) \nstorage (record (\"repeated-usage.py\" 12) (ledger (type_annotation (big_map (\"repeated-usage.py\" 10) ((resolve (attr (account_of_seed \"Alice\" (\"repeated-usage.py\" 26)) \"address\" (\"repeated-usage.py\" 26)) (\"repeated-usage.py\" 26)) (literal (nat 10) (\"repeated-usage.py\" 8)))) (bigmap \"address\" \"nat\") (\"repeated-usage.py\" 10))) (result (literal (intOrNat 0) (\"repeated-usage.py\" 12))))\nstorage_type (())\nentry_points ((division True None None None True (\"repeated-usage.py\" 15) ((ifBlock (neq (getItem (attr (data) \"ledger\" (\"repeated-usage.py\" 17)) (sender) (\"repeated-usage.py\" 17)) (literal (intOrNat 0) (\"repeated-usage.py\" 17)) (\"repeated-usage.py\" 17)) ((set (attr (data) \"result\" (\"repeated-usage.py\" 18)) (floordiv (params (\"repeated-usage.py\" 15)) (getItem (attr (data) \"ledger\" (\"repeated-usage.py\" 17)) (sender) (\"repeated-usage.py\" 18)) (\"repeated-usage.py\" 18)) (\"repeated-usage.py\" 18))) (\"repeated-usage.py\" 17)))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"repeated-usage.py\" 28))",
+    "line_no": "(\"repeated-usage.py\" 28)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"repeated-usage.py\" 28))",
+    "line_no": "(\"repeated-usage.py\" 30)",
+    "message": "division",
+    "params": "(literal (intOrNat 22) (\"repeated-usage.py\" 30))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"repeated-usage.py\" 28)) (\"repeated-usage.py\" 30)) \"result\" (\"repeated-usage.py\" 31)) (literal (intOrNat 2) (\"repeated-usage.py\" 31)) (\"repeated-usage.py\" 31))",
+    "line_no": "(\"repeated-usage.py\" 31)"
+   }
+  ],
+  "kind": "test"
+ }
+]

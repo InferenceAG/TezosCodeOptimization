@@ -1,0 +1,15 @@
+parameter (unit %increaseCounter);
+storage   (pair (nat %value1) (pair (nat %value2) (pair (nat %value3) (pair (nat %value4) (pair (nat %value5) (pair (nat %value6) (pair (nat %value7) (pair (nat %value8) (pair (nat %value9) (pair (nat %value10) (pair (nat %value11) (pair (nat %value12) (pair (nat %value13) (pair (nat %value14) (pair (nat %value15) (nat %value16))))))))))))))));
+code
+  {
+    CDR;        # @storage
+    # == increaseCounter ==
+    # self.data.value1 += 1 # @storage
+    DUP;        # @storage : @storage
+    CAR;        # nat : @storage
+    PUSH nat 1; # nat : nat : @storage
+    ADD;        # nat : @storage
+    UPDATE 1;   # @storage
+    NIL operation; # list operation : @storage
+    PAIR;       # pair (list operation) @storage
+  };

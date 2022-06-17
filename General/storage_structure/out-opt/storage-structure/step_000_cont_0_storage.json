@@ -1,0 +1,79 @@
+{
+  "prim": "Pair",
+  "args": [
+    { "int": "0" },
+    {
+      "prim": "Pair",
+      "args": [
+        { "int": "2" },
+        {
+          "prim": "Pair",
+          "args": [
+            { "int": "3" },
+            {
+              "prim": "Pair",
+              "args": [
+                { "int": "4" },
+                {
+                  "prim": "Pair",
+                  "args": [
+                    { "int": "5" },
+                    {
+                      "prim": "Pair",
+                      "args": [
+                        { "int": "6" },
+                        {
+                          "prim": "Pair",
+                          "args": [
+                            { "int": "7" },
+                            {
+                              "prim": "Pair",
+                              "args": [
+                                { "int": "8" },
+                                {
+                                  "prim": "Pair",
+                                  "args": [
+                                    { "int": "9" },
+                                    {
+                                      "prim": "Pair",
+                                      "args": [
+                                        { "int": "10" },
+                                        {
+                                          "prim": "Pair",
+                                          "args": [
+                                            { "int": "11" },
+                                            {
+                                              "prim": "Pair",
+                                              "args": [
+                                                { "int": "12" },
+                                                {
+                                                  "prim": "Pair",
+                                                  "args": [
+                                                    { "int": "13" },
+                                                    { "prim": "Pair", "args": [ { "int": "14" }, { "prim": "Pair", "args": [ { "int": "15" }, { "int": "16" } ] } ] }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

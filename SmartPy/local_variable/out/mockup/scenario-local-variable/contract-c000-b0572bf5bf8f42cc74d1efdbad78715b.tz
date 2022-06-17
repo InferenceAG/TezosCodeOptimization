@@ -1,0 +1,61 @@
+parameter (pair %minimum (int %valA) (int %valB));
+storage   (pair (bool %bool) (int %store));
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    SWAP;       # @storage : @parameter
+    # == minimum ==
+    # self.data.bool = False # @storage : @parameter
+    PUSH bool False; # bool : @storage : @parameter
+    UPDATE 1;   # @storage : @parameter
+    SWAP;       # @parameter : @storage
+    # if sp.min(params.valA, params.valB) == 3: # @parameter : @storage
+    PUSH int 3; # int : @parameter : @storage
+    SWAP;       # @parameter : int : @storage
+    DUP;        # @parameter : @parameter : int : @storage
+    CDR;        # int : @parameter : int : @storage
+    SWAP;       # @parameter : int : int : @storage
+    DUP;        # @parameter : @parameter : int : int : @storage
+    DUG 3;      # @parameter : int : int : @parameter : @storage
+    CAR;        # int : int : int : @parameter : @storage
+    DUP;        # int : int : int : int : @parameter : @storage
+    DUP 3;      # int : int : int : int : int : @parameter : @storage
+    COMPARE;    # int : int : int : int : @parameter : @storage
+    LE;         # bool : int : int : int : @parameter : @storage
+    IF
+      {
+        DROP;       # int : int : @parameter : @storage
+      }
+      {
+        SWAP;       # int : int : int : @parameter : @storage
+        DROP;       # int : int : @parameter : @storage
+      }; # int : int : @parameter : @storage
+    COMPARE;    # int : @parameter : @storage
+    EQ;         # bool : @parameter : @storage
+    IF
+      {
+        SWAP;       # @storage : @parameter
+        # self.data.bool = True # @storage : @parameter
+        PUSH bool True; # bool : @storage : @parameter
+        UPDATE 1;   # @storage : @parameter
+        SWAP;       # @parameter : @storage
+      }
+      {}; # @parameter : @storage
+    # self.data.store = sp.min(params.valA, params.valB) # @parameter : @storage
+    UNPAIR;     # int : int : @storage
+    DUP;        # int : int : int : @storage
+    DUP 3;      # int : int : int : int : @storage
+    COMPARE;    # int : int : int : @storage
+    LE;         # bool : int : int : @storage
+    IF
+      {
+        DROP;       # int : @storage
+      }
+      {
+        SWAP;       # int : int : @storage
+        DROP;       # int : @storage
+      }; # int : @storage
+    UPDATE 2;   # @storage
+    NIL operation; # list operation : @storage
+    PAIR;       # pair (list operation) @storage
+  };

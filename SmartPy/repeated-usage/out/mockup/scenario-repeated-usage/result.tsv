@@ -1,0 +1,4 @@
+scenario-repeated-usage OK
+  OK,0028,New_contract
+  OK,0030,Message
+  OK,0031,Verify

@@ -1,0 +1,58 @@
+Node is bootstrapped.
+Estimated gas: 1426.518 units (will add 100 for safety)
+Estimated storage: 384 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'opDrnMbBzCwKTPyc7gFj2Y54Vp2HEf1FqF8tnAdC8Dx6LwTqJ1F'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for opDrnMbBzCwKTPyc7gFj2Y54Vp2HEf1FqF8tnAdC8Dx6LwTqJ1F to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000477
+    Expected counter: 2
+    Gas limit: 1527
+    Storage limit: 404 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000477
+      payload fees(the block proposer) ....... +ꜩ0.000477
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (nat %add) ;
+          storage (big_map address nat) ;
+          code { UNPAIR ;
+                 SWAP ;
+                 DUP ;
+                 DUG 2 ;
+                 SWAP ;
+                 DIG 2 ;
+                 SENDER ;
+                 GET ;
+                 IF_NONE { PUSH nat 0 } {} ;
+                 ADD ;
+                 SOME ;
+                 SENDER ;
+                 UPDATE ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage: {}
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s
+        Storage size: 127 bytes
+        Updated big_maps:
+          New map(4) of type (big_map address nat)
+        Paid storage size diff: 127 bytes
+        Consumed gas: 1426.518
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.03175
+          storage fees ........................... +ꜩ0.03175
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1DAsWDDR3fq4G2LjnQqYNo2J9Wf9jDWE8s originated.
+Contract memorized as c000-d0939bb1b1c0e42ce3ef9aa6b8e30fee.

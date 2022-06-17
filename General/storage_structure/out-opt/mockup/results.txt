@@ -1,0 +1,12 @@
+################################################################################
+* Ran 1 test.
+* Total time: 3.308000 s.
+  * Start: 2022-06-17T13:08:06-00:00
+  * End:   2022-06-17T13:08:09-00:00
+################################################################################
+#====== Test Results for scenario-storage-structure: All OK! ======#
+⏰ Total Time: 3.30 s.
+Scenario interpretation state: (3 history items):
+  ✔ New contract 0 (l.57).
+  ✔ Message 0#increaseCounter (l.59)(valid: True).
+  ✔ Verify (l.60).

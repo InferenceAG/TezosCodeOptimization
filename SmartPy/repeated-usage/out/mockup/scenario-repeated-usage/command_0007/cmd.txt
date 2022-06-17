@@ -1,0 +1,1 @@
+mkdir -p './out/mockup/scenario-repeated-usage/client-dir' './out/mockup/scenario-repeated-usage/command_0007' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.nBln6v' 'get' 'contract' 'storage' 'for' 'KT1HRCB1UoaSWwBTrGUbaxBNM2ZYoqmd5xao' > './out/mockup/scenario-repeated-usage/command_0007'/out.txt 2> './out/mockup/scenario-repeated-usage/command_0007'/err.txt ; }

@@ -1,0 +1,66 @@
+Node is bootstrapped.
+Estimated gas: 1459.965 units (will add 100 for safety)
+Estimated storage: 650 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'oooiNTX6FwhigR8ZnJtyc8UVDyCLhgnVsfmLkKtDTnCYsX1T5AT'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for oooiNTX6FwhigR8ZnJtyc8UVDyCLhgnVsfmLkKtDTnCYsX1T5AT to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.00078
+    Expected counter: 2
+    Gas limit: 1560
+    Storage limit: 670 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.00078
+      payload fees(the block proposer) ....... +ꜩ0.00078
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (unit %increaseCounter) ;
+          storage
+            (pair (pair (pair (pair (int %value1) (int %value10)) (pair (int %value11) (int %value12)))
+                        (pair (pair (int %value13) (int %value14)) (pair (int %value15) (int %value16))))
+                  (pair (pair (pair (int %value2) (int %value3)) (pair (int %value4) (int %value5)))
+                        (pair (pair (int %value6) (int %value7)) (pair (int %value8) (int %value9))))) ;
+          code { CDR ;
+                 UNPAIR ;
+                 UNPAIR ;
+                 SWAP ;
+                 UNPAIR ;
+                 SWAP ;
+                 UNPAIR ;
+                 SWAP ;
+                 PUSH int 1 ;
+                 ADD ;
+                 SWAP ;
+                 PAIR ;
+                 SWAP ;
+                 PAIR ;
+                 SWAP ;
+                 PAIR ;
+                 PAIR ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage:
+          (Pair (Pair (Pair (Pair 1 10) (Pair 11 12)) (Pair (Pair 13 14) (Pair 15 0)))
+                (Pair (Pair (Pair 2 3) (Pair 4 5)) (Pair (Pair 6 7) (Pair 8 9))))
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1JnEB7M2uU6gcYLHxCWCS5mtWL8LjVEhba
+        Storage size: 393 bytes
+        Paid storage size diff: 393 bytes
+        Consumed gas: 1459.965
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.09825
+          storage fees ........................... +ꜩ0.09825
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1JnEB7M2uU6gcYLHxCWCS5mtWL8LjVEhba originated.
+Contract memorized as c000-dfca54b8d4708a078a0079254641a2b6.

@@ -1,0 +1,15 @@
+mkdir -p './out-opt/mockup/scenario-local-variable/client-dir' './out-opt/mockup/scenario-local-variable/command_0011' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.GGZhqv' 'run' 'script' 'parameter (pair %compute (bool %bool) (int %store));
+storage   (option bool);
+code
+  {
+    CAR;        # @parameter
+    # == compute ==
+    # self.data = sp.some(params.k0.store == 4) # @parameter
+    CDR;        # int
+    PUSH int 4; # int : int
+    COMPARE;    # int
+    EQ;         # bool
+    SOME;       # option bool
+    NIL operation; # list operation : option bool
+    PAIR;       # pair (list operation) (option bool)
+  };' 'on' 'storage' 'None' 'and' 'input' 'Pair False 4' '-G' '1000000000' > './out-opt/mockup/scenario-local-variable/command_0011'/out.txt 2> './out-opt/mockup/scenario-local-variable/command_0011'/err.txt ; }

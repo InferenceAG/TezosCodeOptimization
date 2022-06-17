@@ -1,0 +1,67 @@
+Node is bootstrapped.
+Estimated gas: 1691.485 units (will add 100 for safety)
+Estimated storage: 558 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'ooZs22vF5n1NuawSiUSRnJYt6nZtmF4CRS3nTRMkUKX7BeqYwL5'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for ooZs22vF5n1NuawSiUSRnJYt6nZtmF4CRS3nTRMkUKX7BeqYwL5 to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000656
+    Expected counter: 2
+    Gas limit: 1792
+    Storage limit: 578 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000656
+      payload fees(the block proposer) ....... +ꜩ0.000656
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (nat %division) ;
+          storage (pair (big_map %ledger address nat) (nat %result)) ;
+          code { UNPAIR ;
+                 PUSH nat 0 ;
+                 DUP 3 ;
+                 CAR ;
+                 SENDER ;
+                 GET ;
+                 IF_NONE { PUSH int 17 ; FAILWITH } {} ;
+                 COMPARE ;
+                 NEQ ;
+                 IF { SWAP ;
+                      DUP ;
+                      CAR ;
+                      SENDER ;
+                      GET ;
+                      IF_NONE { PUSH int 18 ; FAILWITH } {} ;
+                      DIG 2 ;
+                      EDIV ;
+                      IF_NONE { PUSH int 18 ; FAILWITH } { CAR } ;
+                      UPDATE 2 }
+                    { DROP } ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage:
+          (Pair { Elt "tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi" 10 } 0)
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1HRCB1UoaSWwBTrGUbaxBNM2ZYoqmd5xao
+        Storage size: 301 bytes
+        Updated big_maps:
+          New map(4) of type (big_map address nat)
+          Set map(4)[0x00007c38b4bb43c4340b9e33ab837130c63223aa9fd7] to 10
+        Paid storage size diff: 301 bytes
+        Consumed gas: 1691.485
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.07525
+          storage fees ........................... +ꜩ0.07525
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1HRCB1UoaSWwBTrGUbaxBNM2ZYoqmd5xao originated.
+Contract memorized as c000-98da01e6b34830024293c219c5a230fe.

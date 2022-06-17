@@ -1,0 +1,12 @@
+################################################################################
+* Ran 1 test.
+* Total time: 3.438000 s.
+  * Start: 2022-06-17T12:24:40-00:00
+  * End:   2022-06-17T12:24:43-00:00
+################################################################################
+#====== Test Results for scenario-repeated-usage: All OK! ======#
+⏰ Total Time: 3.43 s.
+Scenario interpretation state: (3 history items):
+  ✔ New contract 0 (l.28).
+  ✔ Message 0#division (l.30)(valid: True).
+  ✔ Verify (l.31).

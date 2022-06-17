@@ -1,0 +1,52 @@
+parameter (nat %division);
+storage   (pair (big_map %ledger address nat) (nat %result));
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    # == division ==
+    # if self.data.ledger[sp.sender] != 0: # @parameter : @storage
+    PUSH nat 0; # nat : @parameter : @storage
+    DUP 3;      # @storage : nat : @parameter : @storage
+    CAR;        # big_map address nat : nat : @parameter : @storage
+    SENDER;     # @sender : big_map address nat : nat : @parameter : @storage
+    GET;        # option nat : nat : @parameter : @storage
+    IF_NONE
+      {
+        PUSH int 17; # int : nat : @parameter : @storage
+        FAILWITH;   # FAILED
+      }
+      {}; # @some : nat : @parameter : @storage
+    COMPARE;    # int : @parameter : @storage
+    NEQ;        # bool : @parameter : @storage
+    IF
+      {
+        SWAP;       # @storage : @parameter
+        # self.data.result = params // self.data.ledger[sp.sender] # @storage : @parameter
+        DUP;        # @storage : @storage : @parameter
+        CAR;        # big_map address nat : @storage : @parameter
+        SENDER;     # @sender : big_map address nat : @storage : @parameter
+        GET;        # option nat : @storage : @parameter
+        IF_NONE
+          {
+            PUSH int 18; # int : @storage : @parameter
+            FAILWITH;   # FAILED
+          }
+          {}; # @some : @storage : @parameter
+        DIG 2;      # @parameter : @some : @storage
+        EDIV;       # option (pair nat nat) : @storage
+        IF_NONE
+          {
+            PUSH int 18; # int : @storage
+            FAILWITH;   # FAILED
+          }
+          {
+            CAR;        # nat : @storage
+          }; # nat : @storage
+        UPDATE 2;   # @storage
+      }
+      {
+        DROP;       # @storage
+      }; # @storage
+    NIL operation; # list operation : @storage
+    PAIR;       # pair (list operation) @storage
+  };

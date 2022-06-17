@@ -1,0 +1,14 @@
+################################################################################
+* Ran 1 test.
+* Total time: 4.796000 s.
+  * Start: 2022-06-17T13:06:20-00:00
+  * End:   2022-06-17T13:06:25-00:00
+################################################################################
+#====== Test Results for scenario-map-interaction: All OK! ======#
+⏰ Total Time: 4.79 s.
+Scenario interpretation state: (5 history items):
+  ✔ New contract 0 (l.27).
+  ✔ Message 0#add (l.29)(valid: True).
+  ✔ Verify (l.30).
+  ✔ Message 0#add (l.32)(valid: True).
+  ✔ Verify (l.33).

@@ -1,0 +1,31 @@
+Node is bootstrapped.
+Estimated gas: 3158.278 units (will add 100 for safety)
+Estimated storage: no bytes added
+Operation successfully injected in the node.
+Operation hash is 'oo7qJGJ2HKENL9CeKQfAubrmXXceCJPoNeTa5fcM5ex2JfUnXqi'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for oo7qJGJ2HKENL9CeKQfAubrmXXceCJPoNeTa5fcM5ex2JfUnXqi to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+    Fee to the baker: ꜩ0.000581
+    Expected counter: 6
+    Gas limit: 3259
+    Storage limit: 0 bytes
+    Balance updates:
+      tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi ... -ꜩ0.000581
+      payload fees(the block proposer) ....... +ꜩ0.000581
+    Transaction:
+      Amount: ꜩ0
+      From: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+      To: KT1TgmeS48uRBB37ZtJJ1fRqvn4zMY1uDT9y
+      Parameter: 3
+      This transaction was successfully applied
+      Updated storage: 4
+      Updated big_maps:
+        Set map(4)[0x00007c38b4bb43c4340b9e33ab837130c63223aa9fd7] to 8
+      Storage size: 238 bytes
+      Consumed gas: 3159.076
+

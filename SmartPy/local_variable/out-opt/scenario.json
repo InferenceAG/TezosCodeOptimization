@@ -1,0 +1,43 @@
+[
+ {
+  "shortname": "local-variable",
+  "longname": "local-variable",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"local-variable-opt.py\" 30)) \nstorage (record (\"local-variable-opt.py\" 9) (bool (literal (bool False) (\"local-variable-opt.py\" 9))) (store (literal (intOrNat 0) (\"local-variable-opt.py\" 9))))\nstorage_type (())\nentry_points ((minimum True None None None True (\"local-variable-opt.py\" 12) ((set (attr (data) \"bool\" (\"local-variable-opt.py\" 14)) (literal (bool False) (\"local-variable-opt.py\" 14)) (\"local-variable-opt.py\" 14)) (defineLocal \"minVal\" (min (attr (params (\"local-variable-opt.py\" 12)) \"valA\" (\"local-variable-opt.py\" 30)) (attr (params (\"local-variable-opt.py\" 12)) \"valB\" (\"local-variable-opt.py\" 30)) (\"local-variable-opt.py\" 16)) True (\"local-variable-opt.py\" 16)) (ifBlock (eq (getLocal \"minVal\" (\"local-variable-opt.py\" 17)) (literal (intOrNat 3) (\"local-variable-opt.py\" 17)) (\"local-variable-opt.py\" 17)) ((set (attr (data) \"bool\" (\"local-variable-opt.py\" 14)) (literal (bool True) (\"local-variable-opt.py\" 18)) (\"local-variable-opt.py\" 18))) (\"local-variable-opt.py\" 17)) (set (attr (data) \"store\" (\"local-variable-opt.py\" 20)) (getLocal \"minVal\" (\"local-variable-opt.py\" 20)) (\"local-variable-opt.py\" 20)))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"local-variable-opt.py\" 30))",
+    "line_no": "(\"local-variable-opt.py\" 30)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"local-variable-opt.py\" 30))",
+    "line_no": "(\"local-variable-opt.py\" 32)",
+    "message": "minimum",
+    "params": "(record (\"local-variable-opt.py\" 32) (valA (literal (intOrNat 3) (\"local-variable-opt.py\" 32))) (valB (literal (intOrNat 5) (\"local-variable-opt.py\" 32))))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"local-variable-opt.py\" 30)) (\"local-variable-opt.py\" 32)) \"store\" (\"local-variable-opt.py\" 33)) (literal (intOrNat 3) (\"local-variable-opt.py\" 33)) (\"local-variable-opt.py\" 33))",
+    "line_no": "(\"local-variable-opt.py\" 33)"
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"local-variable-opt.py\" 30))",
+    "line_no": "(\"local-variable-opt.py\" 35)",
+    "message": "minimum",
+    "params": "(record (\"local-variable-opt.py\" 35) (valA (literal (intOrNat 5) (\"local-variable-opt.py\" 35))) (valB (literal (intOrNat 4) (\"local-variable-opt.py\" 35))))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"local-variable-opt.py\" 30)) (\"local-variable-opt.py\" 35)) \"store\" (\"local-variable-opt.py\" 36)) (literal (intOrNat 4) (\"local-variable-opt.py\" 36)) (\"local-variable-opt.py\" 36))",
+    "line_no": "(\"local-variable-opt.py\" 36)"
+   }
+  ],
+  "kind": "test"
+ }
+]

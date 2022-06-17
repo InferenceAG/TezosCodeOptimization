@@ -1,0 +1,47 @@
+parameter (nat %division);
+storage   (pair (big_map %ledger address nat) (nat %result));
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    SWAP;       # @storage : @parameter
+    # == division ==
+    # denominator = sp.local("denominator", self.data.ledger[sp.sender]) # @storage : @parameter
+    DUP;        # @storage : @storage : @parameter
+    DUG 2;      # @storage : @parameter : @storage
+    CAR;        # big_map address nat : @parameter : @storage
+    SENDER;     # @sender : big_map address nat : @parameter : @storage
+    GET;        # option nat : @parameter : @storage
+    IF_NONE
+      {
+        PUSH int 17; # int : @parameter : @storage
+        FAILWITH;   # FAILED
+      }
+      {}; # @some : @parameter : @storage
+    # if denominator.value != 0: # @some : @parameter : @storage
+    DUP;        # @some : @some : @parameter : @storage
+    PUSH nat 0; # nat : @some : @some : @parameter : @storage
+    COMPARE;    # int : @some : @parameter : @storage
+    NEQ;        # bool : @some : @parameter : @storage
+    IF
+      {
+        # self.data.result = params // denominator.value # @some : @parameter : @storage
+        DIG 2;      # @storage : @some : @parameter
+        SWAP;       # @some : @storage : @parameter
+        DIG 2;      # @parameter : @some : @storage
+        EDIV;       # option (pair nat nat) : @storage
+        IF_NONE
+          {
+            PUSH int 19; # int : @storage
+            FAILWITH;   # FAILED
+          }
+          {
+            CAR;        # nat : @storage
+          }; # nat : @storage
+        UPDATE 2;   # @storage
+      }
+      {
+        DROP 2;     # @storage
+      }; # @storage
+    NIL operation; # list operation : @storage
+    PAIR;       # pair (list operation) @storage
+  };

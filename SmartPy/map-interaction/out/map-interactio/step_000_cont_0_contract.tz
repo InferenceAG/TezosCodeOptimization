@@ -1,0 +1,43 @@
+parameter (nat %add);
+storage   (big_map address nat);
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    SWAP;       # @storage : @parameter
+    # == add ==
+    # if ~ (self.data.ledger.contains(sp.sender)): # @storage : @parameter
+    DUP;        # @storage : @storage : @parameter
+    DUG 2;      # @storage : @parameter : @storage
+    SENDER;     # @sender : @storage : @parameter : @storage
+    MEM;        # bool : @parameter : @storage
+    IF
+      {}
+      {
+        SWAP;       # @storage : @parameter
+        # self.data.ledger[sp.sender] = 0 # @storage : @parameter
+        PUSH (option nat) (Some 0); # option nat : @storage : @parameter
+        SENDER;     # @sender : option nat : @storage : @parameter
+        UPDATE;     # big_map address nat : @parameter
+        SWAP;       # @parameter : big_map address nat
+      }; # @parameter : big_map address nat
+    SWAP;       # big_map address nat : @parameter
+    # self.data.ledger[sp.sender] += params # big_map address nat : @parameter
+    DUP;        # big_map address nat : big_map address nat : @parameter
+    SENDER;     # @sender : big_map address nat : big_map address nat : @parameter
+    DUP;        # @sender : @sender : big_map address nat : big_map address nat : @parameter
+    DUG 2;      # @sender : big_map address nat : @sender : big_map address nat : @parameter
+    GET;        # option nat : @sender : big_map address nat : @parameter
+    IF_NONE
+      {
+        PUSH int 19; # int : @sender : big_map address nat : @parameter
+        FAILWITH;   # FAILED
+      }
+      {}; # @some : @sender : big_map address nat : @parameter
+    DIG 3;      # @parameter : @some : @sender : big_map address nat
+    ADD;        # nat : @sender : big_map address nat
+    SOME;       # option nat : @sender : big_map address nat
+    SWAP;       # @sender : option nat : big_map address nat
+    UPDATE;     # big_map address nat
+    NIL operation; # list operation : big_map address nat
+    PAIR;       # pair (list operation) (big_map address nat)
+  };

@@ -1,0 +1,9 @@
+{
+  "tezos-scenario-result.v0": [
+    {
+      "name": "scenario-map-interaction",
+      "result": "OK",
+      "items": 5
+    }
+  ]
+}
