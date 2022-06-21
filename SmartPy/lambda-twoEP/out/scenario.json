@@ -1,0 +1,30 @@
+[
+ {
+  "shortname": "lambda",
+  "longname": "lambda",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id ((\"lambda.py\" 38) static_id 0) \nstorage ((\"lambda.py\" 10) record (store ((\"lambda.py\" 10) literal (intOrNat 0))))\nstorage_type (())\nentry_points ((one True None None None True (\"lambda.py\" 20) (((\"lambda.py\" 22) define_local \"temp\" ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 20) params) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) True) ((\"lambda.py\" 23) set ((\"lambda.py\" 23) attr ((\"lambda.py\" 38) data) \"store\") ((\"lambda.py\" 23) get_local \"temp\")))) (two True None None None True (\"lambda.py\" 25) (((\"lambda.py\" 27) define_local \"temp\" ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 17) add ((\"lambda.py\" 25) params) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) ((\"lambda.py\" 17) literal (intOrNat 1))) True) ((\"lambda.py\" 28) set ((\"lambda.py\" 23) attr ((\"lambda.py\" 38) data) \"store\") ((\"lambda.py\" 28) get_local \"temp\")))))\nflags ()\nprivates ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "((\"lambda.py\" 38) static_id 0)",
+    "line_no": "(\"lambda.py\" 38)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "((\"lambda.py\" 38) static_id 0)",
+    "line_no": "(\"lambda.py\" 40)",
+    "message": "one",
+    "params": "((\"lambda.py\" 40) literal (nat 5))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "((\"lambda.py\" 41) eq ((\"lambda.py\" 41) attr ((\"lambda.py\" 40) contract_data ((\"lambda.py\" 38) static_id 0)) \"store\") ((\"lambda.py\" 41) literal (intOrNat 15)))",
+    "line_no": "(\"lambda.py\" 41)"
+   }
+  ],
+  "kind": "test"
+ }
+]

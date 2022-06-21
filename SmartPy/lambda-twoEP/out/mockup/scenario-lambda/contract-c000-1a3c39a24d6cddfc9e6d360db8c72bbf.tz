@@ -1,0 +1,61 @@
+parameter (or (nat %one) (nat %two));
+storage   nat;
+code
+  {
+    CAR;        # @parameter
+    IF_LEFT
+      {
+        # == one ==
+        # temp = sp.local("temp", (((((((((params + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) # @parameter%one
+        PUSH nat 1; # nat : @parameter%one
+        DUP;        # nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : @parameter%one
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : @parameter%one
+        DIG 10;     # @parameter%one : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat
+        ADD;        # nat : nat : nat
+        ADD;        # nat : nat
+        ADD;        # nat
+        # self.data.store = temp.value # nat
+      }
+      {
+        # == two ==
+        # temp = sp.local("temp", (((((((((params + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) # @parameter%two
+        PUSH nat 1; # nat : @parameter%two
+        DUP;        # nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : @parameter%two
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : @parameter%two
+        DIG 10;     # @parameter%two : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat
+        ADD;        # nat : nat : nat
+        ADD;        # nat : nat
+        ADD;        # nat
+        # self.data.store = temp.value # nat
+      }; # nat
+    NIL operation; # list operation : nat
+    PAIR;       # pair (list operation) nat
+  };

@@ -1,0 +1,31 @@
+Node is bootstrapped.
+Estimated gas: 1420.040 units (will add 0 for safety)
+Estimated storage: 257 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'onrHZvwWoVokycTyRHUiagMQdZ1owaDwLKghuGNuZUVVJGMmrHD'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for onrHZvwWoVokycTyRHUiagMQdZ1owaDwLKghuGNuZUVVJGMmrHD to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000395
+    Expected counter: 3
+    Gas limit: 1421
+    Storage limit: 277 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000395
+      payload fees(the block proposer) ....... +ꜩ0.000395
+    Transaction:
+      Amount: ꜩ10
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      To: tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi
+      This transaction was successfully applied
+      Consumed gas: 1420.040
+      Balance updates:
+        tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ10
+        tz1WxrQuZ4CK1MBUa2GqUWK1yJ4J6EtG1Gwi ... +ꜩ10
+        tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+        storage fees ........................... +ꜩ0.06425
+

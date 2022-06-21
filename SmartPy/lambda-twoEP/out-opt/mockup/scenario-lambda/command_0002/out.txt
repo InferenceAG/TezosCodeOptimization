@@ -1,0 +1,72 @@
+Node is bootstrapped.
+Estimated gas: 1434.011 units (will add 100 for safety)
+Estimated storage: 420 bytes added (will add 20 for safety)
+Operation successfully injected in the node.
+Operation hash is 'opYupVL3MerktxybdGaeHMBEzsi4zmqiopKLyaoim7dLezLecaF'
+NOT waiting for the operation to be included.
+Use command
+  tezos-client wait for opYupVL3MerktxybdGaeHMBEzsi4zmqiopKLyaoim7dLezLecaF to be included --confirmations 1 --branch BLockGenesisGenesisGenesisGenesisGenesisCCCCCeZiLHU
+and/or an external block explorer to make sure that it has been included.
+This sequence of operations was run:
+  Manager signed operations:
+    From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+    Fee to the baker: ꜩ0.000544
+    Expected counter: 2
+    Gas limit: 1535
+    Storage limit: 440 bytes
+    Balance updates:
+      tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.000544
+      payload fees(the block proposer) ....... +ꜩ0.000544
+    Origination:
+      From: tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx
+      Credit: ꜩ0
+      Script:
+        { parameter (or (nat %one) (nat %two)) ;
+          storage nat ;
+          code { LAMBDA
+                   (pair nat nat)
+                   (pair nat nat)
+                   { UNPAIR ;
+                     PUSH nat 1 ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DUP ;
+                     DIG 10 ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     ADD ;
+                     PAIR } ;
+                 SWAP ;
+                 UNPAIR ;
+                 IF_LEFT { PAIR ; EXEC ; CAR } { PAIR ; EXEC ; CAR } ;
+                 NIL operation ;
+                 PAIR } }
+        Initial storage: 0
+        No delegate for this contract
+        This origination was successfully applied
+        Originated contracts:
+          KT1ECHKk1rjvPRBLapDmiMAXuBEcqBGojKxX
+        Storage size: 163 bytes
+        Paid storage size diff: 163 bytes
+        Consumed gas: 1434.011
+        Balance updates:
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.04075
+          storage fees ........................... +ꜩ0.04075
+          tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx ... -ꜩ0.06425
+          storage fees ........................... +ꜩ0.06425
+
+New contract KT1ECHKk1rjvPRBLapDmiMAXuBEcqBGojKxX originated.
+Contract memorized as c000-bfb1c0a8e03fc2449dec1795e48366d7.

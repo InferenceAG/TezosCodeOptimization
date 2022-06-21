@@ -1,0 +1,12 @@
+################################################################################
+* Ran 1 test.
+* Total time: 3.594000 s.
+  * Start: 2022-06-21T10:26:16-00:00
+  * End:   2022-06-21T10:26:20-00:00
+################################################################################
+#====== Test Results for scenario-lambda: All OK! ======#
+⏰ Total Time: 3.59 s.
+Scenario interpretation state: (3 history items):
+  ✔ New contract 0 (l.38).
+  ✔ Message 0#one (l.40)(valid: True).
+  ✔ Verify (l.41).

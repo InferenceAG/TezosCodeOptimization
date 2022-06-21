@@ -1,0 +1,58 @@
+parameter (or (nat %one) (nat %two));
+storage   nat;
+code
+  {
+    # Private variable: myfunc # pair @parameter @storage
+    LAMBDA
+      (pair nat nat)
+      (pair nat nat)
+      {
+        UNPAIR;     # nat : nat
+        # sp.result((((((((((_x0 + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) # nat : nat
+        PUSH nat 1; # nat : nat : nat
+        DUP;        # nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        DUP;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        DIG 10;     # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat : nat
+        ADD;        # nat : nat : nat : nat
+        ADD;        # nat : nat : nat
+        ADD;        # nat : nat
+        PAIR;       # pair nat nat
+      }; # lambda (pair nat nat) (pair nat nat) : pair @parameter @storage
+    SWAP;       # pair @parameter @storage : lambda (pair nat nat) (pair nat nat)
+    UNPAIR;     # @parameter : @storage : lambda (pair nat nat) (pair nat nat)
+    IF_LEFT
+      {
+        # == one ==
+        # compute_lambda-opt_22 = sp.local("compute_lambda-opt_22", self.myfunc(params)) # @parameter%one : @storage : lambda (pair nat nat) (pair nat nat)
+        PAIR;       # pair @parameter%one @storage : lambda (pair nat nat) (pair nat nat)
+        EXEC;       # pair nat nat
+        CAR;        # nat
+        # temp = sp.local("temp", compute_lambda-opt_22.value)
+        # self.data.store = temp.value # nat
+      }
+      {
+        # == two ==
+        # compute_lambda-opt_27 = sp.local("compute_lambda-opt_27", self.myfunc(params)) # @parameter%two : @storage : lambda (pair nat nat) (pair nat nat)
+        PAIR;       # pair @parameter%two @storage : lambda (pair nat nat) (pair nat nat)
+        EXEC;       # pair nat nat
+        CAR;        # nat
+        # temp = sp.local("temp", compute_lambda-opt_27.value)
+        # self.data.store = temp.value # nat
+      }; # nat
+    NIL operation; # list operation : nat
+    PAIR;       # pair (list operation) nat
+  };
