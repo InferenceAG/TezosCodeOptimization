@@ -1,7 +1,0 @@
-storage
-  (Some True)
-emitted operations
-  
-big_map diff
-  
-

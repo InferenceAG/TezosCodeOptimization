@@ -1,1 +1,0 @@
-sp.record(store = 0)

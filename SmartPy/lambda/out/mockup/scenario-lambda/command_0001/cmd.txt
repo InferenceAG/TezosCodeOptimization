@@ -1,1 +1,0 @@
-mkdir -p 'out/mockup/scenario-lambda/client-dir' 'out/mockup/scenario-lambda/command_0001' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.fwPYgm' '-wait' 'none' 'transfer' '1410.065408' 'from' 'bootstrap1' 'to' 'smartml-originator' '--burn-cap' '1' > 'out/mockup/scenario-lambda/command_0001'/out.txt 2> 'out/mockup/scenario-lambda/command_0001'/err.txt ; }

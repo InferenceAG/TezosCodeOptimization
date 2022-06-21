@@ -1,1 +1,0 @@
-mkdir -p 'out-opt/mockup/scenario-lambda/client-dir' 'out-opt/mockup/scenario-lambda/command_0004' && {  tezos-client '--mode' 'mockup' '--base-dir' '_mockup.PcXIfQ' 'get' 'balance' 'for' 'Acc-tz1WxrQuZ4' > 'out-opt/mockup/scenario-lambda/command_0004'/out.txt 2> 'out-opt/mockup/scenario-lambda/command_0004'/err.txt ; }
