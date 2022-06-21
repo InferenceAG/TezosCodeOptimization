@@ -1,5 +1,6 @@
 # Code optimizsation example: Lambda
 ## Notes
+Both contracts are doing the same.
 
 ## Commands
 - SmartPy.sh test lambda.py ./out --mockup --protocol ithaca

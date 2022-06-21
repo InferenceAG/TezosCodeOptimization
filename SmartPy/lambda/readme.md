@@ -1,11 +1,6 @@
 # Code optimizsation example: Local variable
 ## Notes
-Both contracts are doing the same:
-- Do any calculation. The example does a very simple comparision of two values and returns the lower of both values.
-- Then an if statment is checking the returned value from the caculation.
-- The returned value is then stored in the storage.
-
-The not optimized contract is not using sp.local to define a variable. Thus, as soon as the variable "minVal" is used the values is also "consumed". After consumption of the value, the value has to be generated/calculated again. Thus, the calculation will be done again.
+Both contracts are doing the same.
 
 ## Commands
 - SmartPy.sh test lambda.py ./out --mockup --protocol ithaca
