@@ -1,0 +1,86 @@
+################################################################################
+* Ran 1 test.
+* Total time: 3.274000 s.
+  * Start: 2022-06-21T09:31:37-00:00
+  * End:   2022-06-21T09:31:40-00:00
+################################################################################
+#====== Test Results for scenario-lambda: All OK! ======#
+⏰ Total Time: 3.27 s.
+Scenario interpretation state: (3 history items):
+  ✔ New contract 0 (l.34), details:
+    \_
+      |- id: 0
+      |- command: `out-opt/mockup/scenario-lambda/command_0000/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0000/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0000/err.txt`
+      |- ret: 0
+    \_
+      |- id: 1
+      |- command: `out-opt/mockup/scenario-lambda/command_0001/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0001/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0001/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 1410065408
+      |- from: `bootstrap1`
+      |- to: `smartml-originator`
+    \_
+      |- id: 2
+      |- command: `out-opt/mockup/scenario-lambda/command_0002/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0002/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0002/err.txt`
+      |- ret: 0
+    \_
+      |- origination: c000-4851fe3485c2afff6d5fa7bde137d4a7
+      |- code:
+         `out-opt/mockup/scenario-lambda/contract-c000-4851fe3485c2afff6d5fa7bde137d4a7.tz`
+    New contract: KT1Qc4c8VUp7q3ybuis2jXNMinWsiqx3ycPp
+  ✔ Message 0#minTen (l.36)(valid: True), details:
+    \_
+      |- id: 3
+      |- command: `out-opt/mockup/scenario-lambda/command_0003/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0003/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0003/err.txt`
+      |- ret: 0
+    \_
+      |- id: 4
+      |- command: `out-opt/mockup/scenario-lambda/command_0004/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0004/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0004/err.txt`
+      |- ret: 0
+    \_
+      |- id: 5
+      |- command: `out-opt/mockup/scenario-lambda/command_0005/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0005/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0005/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 10000000
+      |- from: `bootstrap1`
+      |- to: `Acc-tz1WxrQuZ4`
+    \_
+      |- id: 6
+      |- command: `out-opt/mockup/scenario-lambda/command_0006/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0006/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0006/err.txt`
+      |- ret: 0
+    \_Transfer:
+      |- amount: 0
+      |- from: `Acc-tz1WxrQuZ4`
+      |- to: `KT1Qc4c8VUp7q3ybuis2jXNMinWsiqx3ycPp`
+  ✔ Verify (l.37), details:
+    \_debug:
+      |- expression: `sp.contract_data(0).store == 25`
+      |- layout: `(Leaf { source = "k0"; target = "k0" })`
+    \_
+      |- id: 8
+      |- command: `out-opt/mockup/scenario-lambda/command_0008/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0008/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0008/err.txt`
+      |- ret: 0
+    \_
+      |- id: 7
+      |- command: `out-opt/mockup/scenario-lambda/command_0007/cmd.txt`
+      |- stdout: `out-opt/mockup/scenario-lambda/command_0007/out.txt`
+      |- stderr: `out-opt/mockup/scenario-lambda/command_0007/err.txt`
+      |- ret: 0

@@ -1,0 +1,44 @@
+[
+  { "prim": "storage", "args": [ { "prim": "nat" } ] },
+  { "prim": "parameter", "args": [ { "prim": "nat", "annots": [ "%minTen" ] } ] },
+  {
+    "prim": "code",
+    "args": [
+      [
+        { "prim": "CAR" },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "10" } ] },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "1" } ] },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "10" } ] },
+        { "prim": "DIG", "args": [ { "int": "3" } ] },
+        { "prim": "DUP" },
+        { "prim": "DUP", "args": [ { "int": "3" } ] },
+        { "prim": "COMPARE" },
+        { "prim": "LE" },
+        { "prim": "IF", "args": [ [ { "prim": "DROP" } ], [ { "prim": "SWAP" }, { "prim": "DROP" } ] ] },
+        { "prim": "ADD" },
+        { "prim": "DUP" },
+        { "prim": "DUP", "args": [ { "int": "3" } ] },
+        { "prim": "COMPARE" },
+        { "prim": "LE" },
+        { "prim": "IF", "args": [ [ { "prim": "DROP" } ], [ { "prim": "SWAP" }, { "prim": "DROP" } ] ] },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "10" } ] },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "1" } ] },
+        { "prim": "PUSH", "args": [ { "prim": "nat" }, { "int": "10" } ] },
+        { "prim": "DIG", "args": [ { "int": "3" } ] },
+        { "prim": "DUP" },
+        { "prim": "DUP", "args": [ { "int": "3" } ] },
+        { "prim": "COMPARE" },
+        { "prim": "LE" },
+        { "prim": "IF", "args": [ [ { "prim": "DROP" } ], [ { "prim": "SWAP" }, { "prim": "DROP" } ] ] },
+        { "prim": "ADD" },
+        { "prim": "DUP" },
+        { "prim": "DUP", "args": [ { "int": "3" } ] },
+        { "prim": "COMPARE" },
+        { "prim": "LE" },
+        { "prim": "IF", "args": [ [ { "prim": "DROP" } ], [ { "prim": "SWAP" }, { "prim": "DROP" } ] ] },
+        { "prim": "NIL", "args": [ { "prim": "operation" } ] },
+        { "prim": "PAIR" }
+      ]
+    ]
+  }
+]

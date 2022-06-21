@@ -1,0 +1,70 @@
+parameter (nat %minTen);
+storage   nat;
+code
+  {
+    CAR;        # @parameter
+    # == minTen ==
+    # temp = sp.local("temp", sp.min(sp.min(params, 10) + 1, 10)) # @parameter
+    PUSH nat 10; # nat : @parameter
+    PUSH nat 1; # nat : nat : @parameter
+    PUSH nat 10; # nat : nat : nat : @parameter
+    DIG 3;      # @parameter : nat : nat : nat
+    DUP;        # @parameter : @parameter : nat : nat : nat
+    DUP 3;      # nat : @parameter : @parameter : nat : nat : nat
+    COMPARE;    # int : @parameter : nat : nat : nat
+    LE;         # bool : @parameter : nat : nat : nat
+    IF
+      {
+        DROP;       # nat : nat : nat
+      }
+      {
+        SWAP;       # nat : @parameter : nat : nat
+        DROP;       # @parameter : nat : nat
+      }; # nat : nat : nat
+    ADD;        # nat : nat
+    DUP;        # nat : nat : nat
+    DUP 3;      # nat : nat : nat : nat
+    COMPARE;    # int : nat : nat
+    LE;         # bool : nat : nat
+    IF
+      {
+        DROP;       # nat
+      }
+      {
+        SWAP;       # nat : nat
+        DROP;       # nat
+      }; # nat
+    # temp.value = sp.min(sp.min(temp.value, 10) + 1, 10) # nat
+    PUSH nat 10; # nat : nat
+    PUSH nat 1; # nat : nat : nat
+    PUSH nat 10; # nat : nat : nat : nat
+    DIG 3;      # nat : nat : nat : nat
+    DUP;        # nat : nat : nat : nat : nat
+    DUP 3;      # nat : nat : nat : nat : nat : nat
+    COMPARE;    # int : nat : nat : nat : nat
+    LE;         # bool : nat : nat : nat : nat
+    IF
+      {
+        DROP;       # nat : nat : nat
+      }
+      {
+        SWAP;       # nat : nat : nat : nat
+        DROP;       # nat : nat : nat
+      }; # nat : nat : nat
+    ADD;        # nat : nat
+    DUP;        # nat : nat : nat
+    DUP 3;      # nat : nat : nat : nat
+    COMPARE;    # int : nat : nat
+    LE;         # bool : nat : nat
+    IF
+      {
+        DROP;       # nat
+      }
+      {
+        SWAP;       # nat : nat
+        DROP;       # nat
+      }; # nat
+    # self.data.store = temp.value # nat
+    NIL operation; # list operation : nat
+    PAIR;       # pair (list operation) nat
+  };

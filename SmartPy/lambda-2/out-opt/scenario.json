@@ -1,0 +1,30 @@
+[
+ {
+  "shortname": "lambda",
+  "longname": "lambda",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id ((\"lambda-opt.py\" 34) static_id 0) \nstorage ((\"lambda-opt.py\" 10) record (store ((\"lambda-opt.py\" 10) literal (intOrNat 0))))\nstorage_type (())\nentry_points ((minTen True None None None True (\"lambda-opt.py\" 20) (((\"lambda-opt.py\" 22) define_local \"compute_lambda-opt_22\" ((\"lambda-opt.py\" 22) call_lambda ((\"lambda-opt.py\" 13) private \"myfunc\") ((\"lambda-opt.py\" 20) params)) True) ((\"lambda-opt.py\" 22) define_local \"temp\" ((\"lambda-opt.py\" 22) get_local \"compute_lambda-opt_22\") True) ((\"lambda-opt.py\" 23) define_local \"compute_lambda-opt_23\" ((\"lambda-opt.py\" 23) call_lambda ((\"lambda-opt.py\" 13) private \"myfunc\") ((\"lambda-opt.py\" 23) get_local \"temp\")) True) ((\"lambda-opt.py\" 23) set ((\"lambda-opt.py\" 34) get_local \"temp\") ((\"lambda-opt.py\" 23) get_local \"compute_lambda-opt_23\")) ((\"lambda-opt.py\" 24) set ((\"lambda-opt.py\" 24) attr ((\"lambda-opt.py\" 34) data) \"store\") ((\"lambda-opt.py\" 24) get_local \"temp\")))))\nflags ()\nprivates ((myfunc ((\"lambda-opt.py\" 34) lambda 0 \"read-write\" False \"\" (((\"lambda-opt.py\" 18) result ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 17) add ((\"lambda-opt.py\" 34) lambda_params 0 \"\" (unknown 1)) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))) ((\"lambda-opt.py\" 17) literal (intOrNat 1))))))))\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "((\"lambda-opt.py\" 34) static_id 0)",
+    "line_no": "(\"lambda-opt.py\" 34)",
+    "show": true
+   },
+   {
+    "action": "message",
+    "id": "((\"lambda-opt.py\" 34) static_id 0)",
+    "line_no": "(\"lambda-opt.py\" 36)",
+    "message": "minTen",
+    "params": "((\"lambda-opt.py\" 36) literal (nat 5))",
+    "sender": "seed:Alice"
+   },
+   {
+    "action": "verify",
+    "condition": "((\"lambda-opt.py\" 37) eq ((\"lambda-opt.py\" 37) attr ((\"lambda-opt.py\" 36) contract_data ((\"lambda-opt.py\" 34) static_id 0)) \"store\") ((\"lambda-opt.py\" 37) literal (intOrNat 25)))",
+    "line_no": "(\"lambda-opt.py\" 37)"
+   }
+  ],
+  "kind": "test"
+ }
+]
